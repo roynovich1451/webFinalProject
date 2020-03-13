@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta name="description" content="">
+  <meta name="author" content="">
+
+  <title>Meet Me</title>
+
+  <!-- Bootstrap Core CSS -->
+  <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+
+  <!-- Custom Fonts -->
+  <link href="vendor/fontawesome-free/css/all.min.css" rel="stylesheet" type="text/css">
+  <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,700,300italic,400italic,700italic"
+    rel="stylesheet" type="text/css">
+  <link href="vendor/simple-line-icons/css/simple-line-icons.css" rel="stylesheet">
+
+  <!-- Custom CSS -->
+  <link href="css/stylish-portfolio.min.css" rel="stylesheet">
+  <link href="css/index.css" rel="stylesheet">
+
+
+</head>
+
+<body id="page-top">
+
+  <!-- Navigation -->
+
+  <a class="menu-toggle rounded" href="#">
+    <i class="fas fa-bars"></i>
+  </a>
+  <nav id="sidebar-wrapper">
+    <ul class="sidebar-nav">
+      <li class="sidebar-nav-item">
+        <a class="js-scroll-trigger" href="#page-top">Home</a>
+      </li>
+      <li class="sidebar-nav-item">
+        <a class="js-scroll-trigger" href="#about">About</a>
+      </li>
+      <li class="sidebar-nav-item">
+        <a class="js-scroll-trigger" href="#services">Meetings</a>
+      </li>
+      <li class="sidebar-nav-item">
+        <a id="logoutBTN" class="js-scroll-trigger" href="#page-top">Logout</a>
+      </li>
+    </ul>
+  </nav>
+
+  <!-- Header -->
+  <header class="masthead d-flex">
+
+    <div class="container text-center my-auto">
+      <h1 id="greet" class="mb-1">Wellcome parents!</h1>
+      <h3 class="mb-5">
+        <em>now you can set your appointment more easily!</em>
+      </h3>
+    </div>
+    <div class="overlay"></div>
+  </header>
+
+  <!-- About -->
+  <section class="content-section bg-light" id="about">
+    <div class="container text-center">
+      <div class="row">
+        <div class="col-lg-10 mx-auto">
+          <h2>at Meet Me we want you to have the most comfortable way to set your meetings</h2>
+          <p class="lead mb-5">all you have to do is to pick the wanted teacher and click at the available time!</p>
+          <a class="btn btn-dark btn-xl js-scroll-trigger" href="#services">let's start!</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Services -->
+  <section class="content-section bg-primary text-white text-center" id="services">
+    <div class="container">
+      <div class="content-section-heading">
+        <h2 class="mb-5">Meetings</h2>
+      </div>
+      <div class="row">
+        <div class="col-lg-3 col-md-6 mb-5 mb-lg-0">
+          <span class="service-icon rounded-circle mx-auto mb-3">
+            <i class="icon-screen-smartphone"></i>
+          </span>
+          <h4>
+            <strong>Teachers</strong>
+          </h4>
+          <select id="teacher_select" title="Pick a number" class="w-100 selectpicker">
+            <option value="RG">Rachel Green</option>
+            <option value="JT">Joey Tribbiani</option>
+            <option value="MG">Monica Geller</option>
+            <option value="DRG">Dr. Ross Geller</option>
+            <option value="MH">Mike Hannigan</option>
+            <option value="DRB">Dr. Richard Burke</option>
+            <option value="PB">Phoebe Buffay</option>
+            <option value="CB">Chandler Bing</option>
+          </select>
+          <!-- <div class="form-group down-div position-static">
+            <label class="radio float-left"><input type="radio" name="optradio" value="RS" checked> Rachel Green
+            </label>
+            <label class="radio"><input type="radio" name="optradio" value="MG"> Joey Tribbiani </label>
+            <label class="radio float-left"><input type="radio" name="optradio" value="DS"> Monica Geller </label>
+            <label class="radio "><input type="radio" name="optradio" value="MR"> Dr. Ross Geller </label>
+            <label class="radio-inline float-left"><input type="radio" name="optradio" value="MS"> Mike Hannigan
+            </label>
+            <label class="radio-inline "><input type="radio" name="optradio" value="BH"> Dr. Richard Burke </label>
+            <label class="radio-inline "><input type="radio" name="optradio" value="WT"> Phoebe Buffay </label>
+            <label class="radio-inline float-left"><input type="radio" name="optradio" value="RN"> Chandler Bing
+            </label>
+          </div> -->
+        </div>
+        <div class="col-lg-9  col-md-6 mb-5 mb-lg-0 float-right  ">
+          <span class="service-icon rounded-circle mx-auto mb-3">
+            <i class="icon-pencil"></i>
+          </span>
+          <h4>
+            <strong>22/3/20 - Sunday</strong>
+          </h4>
+          <table id='calendar' class="table table-hover table-dark w-100 p-3">
+            <thead>
+              <tr>
+                <th scope="col" colspan=""">Start</th>
+                <th scope=" col" colspan="">State</th>
+              </tr>
+            </thead>
+            <tbody id="meeting_list">
+            </tbody>
+            <div id="loader" class="text-center">
+              <div class="spinner-border" role="status">
+                <span class="sr-only">Loading...</span>
+              </div>
+            </div>
+          </table>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+  <!-- Scroll to Top Button-->
+  <a class="scroll-to-top rounded js-scroll-trigger" href="#page-top">
+    <i class="fas fa-angle-up"></i>
+  </a>
+
+  <!-- Bootstrap core JavaScript -->
+  <script src="vendor/jquery/jquery.min.js"></script>
+  <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+
+  <!-- Plugin JavaScript -->
+  <script src="vendor/jquery-easing/jquery.easing.min.js"></script>
+
+  <!-- Custom scripts for this template -->
+  <script src="js/stylish-portfolio.min.js"></script>
+
+
+  <!-- Custom JS -->
+  <script src='js/index.js'></script>
+
+  <!-- FIreBase -->
+  <script src="https://www.gstatic.com/firebasejs/7.9.1/firebase-app.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/7.9.1/firebase-database.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/7.9.1/firebase-auth.js"></script>
+
+
+</body>
+
+</html>

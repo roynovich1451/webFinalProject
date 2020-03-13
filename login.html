@@ -1,0 +1,48 @@
+<html>
+
+<head>
+  <title>Student Login</title>
+  <link href="https://fonts.googleapis.com/css?family=Nunito:400,600,700" rel="stylesheet">
+  <link rel="stylesheet" href="css/login.css" />
+
+</head>
+
+<body>
+  <div>
+    <div class="foo">
+      <span class="letter" data-letter="L">L</span>
+      <span class="letter" data-letter="O">O</span>
+      <span class="letter" data-letter="G">G</span>
+      <span class="letter" data-letter="I">I</span>
+      <span class="letter" data-letter="N">N</span>
+    </div>
+    <div class="fadeInDown">
+      <div id="login_div" class="main-div">
+        <input type="email" placeholder="Email..." id="email_field" class="fadeIn secong" />
+        <input type="password" placeholder="Password..." id="password_field" class="fadeIn third" />
+        <button id="mybtn" onclick="login()" class="fadeIn fourth">Login to Account</button>
+      </div>
+    </div>
+  </div>
+  <script src="https://www.gstatic.com/firebasejs/7.9.1/firebase-app.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/7.9.1/firebase-auth.js"></script>
+  <script>
+    const firebaseConfig = {
+      apiKey: "AIzaSyCrxpBSnbxGQ5Htkxsh6BLnyjxhHTvfKdM",
+      authDomain: "web-project-12345.firebaseapp.com",
+      databaseURL: "https://web-project-12345.firebaseio.com",
+      projectId: "web-project-12345",
+      storageBucket: "web-project-12345.appspot.com",
+      messagingSenderId: "797401562503",
+      appId: "1:797401562503:web:3a2c7949233f565a62e722",
+      measurementId: "G-B2NCF39XYP"
+    };
+    // Initialize Firebase
+    firebase.initializeApp(firebaseConfig);
+  </script>
+
+  <script src="js/login.js"></script>
+
+</body>
+
+</html>
