@@ -12,33 +12,25 @@ var full_teacher_name = {
     "CB": "Chandler Bing"
 }
 
-
-
 $(document).ready(function () {
-
     logout();
     initFirebase();
     update_calnder("RG");
     upadate_db_on_click();
-    // build_empty_datababe();
 });
-
-function check_if_user_allready_in_teacher_list(teacher_list, index) {
+//verify user wont have more then one meeting with the same teacher
+function check_already_set_metting_with_current_teacher(teacher_list, index) {
     let flag = true;
     $.each(teacher_list[current_teacher].meeting, function (i, meeting) {
-
-
         if ((meeting.uid).localeCompare(current_user.uid) == 0 && (String(i).toString()).localeCompare(index) != 0) {
             alert("you already signed to " + full_teacher_name[current_teacher]);
             flag = false;
         }
-
     });
-
     return flag;
-
 }
-function is_overlap(teacher_list, index) {
+// check if user dont have duplicates at meeting times.. cant be in two places at a time...
+function check_user_have_meeting_this_time(teacher_list, index) {
     let flag = true;
     $.each(teacher_list, function (i, teacher) {
         if (i.localeCompare(current_teacher) == 0) {
@@ -49,63 +41,49 @@ function is_overlap(teacher_list, index) {
             flag = false;
         }
     });
-
     return flag;
-
 }
-
+//when table click update database
 function upadate_db_on_click() {
     function update(index, val_to_save) {
         firebase.database().ref('teacher_list/' + current_teacher + '/meeting/' + index).update({
             uid: val_to_save
         }).then(() => {
-            console.log("finish update");
             update_calnder(current_teacher);
         });
     }
-
     $('body').on('click', '.click_meeting', function (params) {
         var rc = true;
         var clicked_row = $(this);
         var patt = /([\d]*)/i;
         let id_str = $(this).attr("id")
         var index_in_array = id_str.match(patt);
-        console.log("index", index_in_array[0]);
         var teacher_list_db;
         firebase.database().ref('/teacher_list/').once('value').then(
             function (snapshot) {
                 teacher_list_db = snapshot.val();
             }).then(() => {
-                rc = check_if_user_allready_in_teacher_list(teacher_list_db, index_in_array[0]) && rc;
-                rc = is_overlap(teacher_list_db, index_in_array[0]) && rc;
-                console.log("finish checks");
+                if (($(clicked_row).attr("data-useruid")).localeCompare("None") != 0 &&
+                    ($(clicked_row).attr("data-useruid")).localeCompare(current_user.uid) != 0) {
+                    return;
+                }
+                rc = check_already_set_metting_with_current_teacher(teacher_list_db, index_in_array[0]) && rc;
+                if (rc == false) return;
+                rc = check_user_have_meeting_this_time(teacher_list_db, index_in_array[0]) && rc;
             }).then(() => {
-                console.log("rc", rc);
-                console.log("then then then");
                 var upload_value;
-
                 if (rc == true) {
                     if (($(clicked_row).attr("data-useruid")).localeCompare("None") == 0) {
                         update(index_in_array[0], current_user.uid);
                     } else if (($(clicked_row).attr("data-useruid")).localeCompare(current_user.uid) == 0) {
                         update(index_in_array[0], "None");
-                    } else {
-                        console.log("not update");
-
                     }
-
-
                 }
             });
-
-
-
     });
-
 }
-
+//called when select diffrent teacher at selectBar.
 $('#teacher_select').on('change', function () {
-    console.log($(this).val());
     current_teacher = $(this).val();
     update_calnder($(this).val());
 });
@@ -122,27 +100,24 @@ function build_calender(teacher_arr) {
     $("#loader").hide();
     $("#meeting_list").empty();
     $.each(teacher_arr, function (i, value) {
-        let uid_after_checked
+        let display_value_at_table
         if (value.uid == "None") {
-            uid_after_checked = "Free"
-
+            display_value_at_table = "Free"
         } else if (value.uid.localeCompare(current_user.uid) == 0) {
-
-            uid_after_checked = "Occupied by me"
+            display_value_at_table = "Occupied by me"
         }
         else {
-            uid_after_checked = "Occupied"
+            display_value_at_table = "Occupied"
         }
-
         $("#meeting_list").append(
             "   <tr>" +
             "   <th id='" + i + "h" + "' scope='row'>" + value.time + "</th>" +
-            "   <td class='click_meeting' data-useruid='" + value.uid + "' id='" + i + "d" + "' colspan='5'>" + uid_after_checked + "</td>" +
+            "   <td class='click_meeting' data-useruid='" + value.uid + "' id='" + i + "d" + "' colspan='5'>" + display_value_at_table + "</td>" +
             " </tr>"
         );
-        let q_list = $("#meeting_list").find("tr");
+        let row_at_table = $("#meeting_list").find("tr");
         let index = 0;
-        $.each($(q_list), function (i, val) {
+        $.each($(row_at_table), function (i, val) {
             if ($(val).find("#" + index + "d").text().localeCompare("Free") == 0) {
                 // $(val).css('background-color', '#18a103');
             } else if ($(val).find("#" + index + "d").text().localeCompare("Occupied by me") == 0) {
@@ -163,7 +138,6 @@ function update_calnder(name_teacher) {
         function (snapshot) {
             teacher_arr = snapshot.val();
         }).then(() => {
-            console.log("complate: ");
             build_calender(teacher_arr);
         });
 }
@@ -172,7 +146,6 @@ function initFirebase() {
     function greetings(userEmail) {
         var name = userEmail.substring(0, userEmail.indexOf("@"));
         user_name = name;
-        console.log("name: " + name);
         document.getElementById('greet').innerHTML = "Welcome " + name + " parents!";
     }
     //create config for initialization
@@ -197,18 +170,12 @@ function initFirebase() {
             window.location.replace("login.html");
         }
         else {
-            console.log(current_user);
             greetings(current_user.email);
         }
     });
 }
 
-function setTeacher(teacher_name) {
-    current_teacher = teacher_name;
-}
-function getTeacher() {
-    return current_teacher;
-}
+//quick FireBase builder
 function build_empty_datababe() {
     var teachers = ["RG", "JT", "CB", "DRG", "DRB", "PB", "MH", "MG"];
     var data = [

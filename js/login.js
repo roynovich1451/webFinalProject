@@ -1,6 +1,3 @@
-
-
-
 firebase.auth().onAuthStateChanged(function (user) {
 	if (user) {		// User is signed in
 		document.getElementById("login_div").style.display = "none";
