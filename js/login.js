@@ -24,6 +24,7 @@ function login() {
 	});
 }
 
+//Add login by clicking the "Enter" key
 document.addEventListener("keyup", function (event) {
 	if (event.keyCode === 13) {
 		login();
