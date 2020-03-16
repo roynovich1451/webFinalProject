@@ -1,0 +1,508 @@
+{
+  "teacher_list" : {
+    "CB" : {
+      "meeting" : [ {
+        "time" : "15:00",
+        "uid" : "None"
+      }, {
+        "time" : "15:15",
+        "uid" : "None"
+      }, {
+        "time" : "15:30",
+        "uid" : "None"
+      }, {
+        "time" : "15:45",
+        "uid" : "None"
+      }, {
+        "time" : "16:00",
+        "uid" : "None"
+      }, {
+        "time" : "16:15",
+        "uid" : "H6KGG72BA7brlrNnwVPcSpwFAK93"
+      }, {
+        "time" : "16:30",
+        "uid" : "None"
+      }, {
+        "time" : "16:45",
+        "uid" : "None"
+      }, {
+        "time" : "17:00",
+        "uid" : "Bzebi9sgd1RolqqJy43VUCKTKCE3"
+      }, {
+        "time" : "17:15",
+        "uid" : "None"
+      }, {
+        "time" : "17:30",
+        "uid" : "None"
+      }, {
+        "time" : "17:45",
+        "uid" : "None"
+      }, {
+        "time" : "18:00",
+        "uid" : "None"
+      }, {
+        "time" : "18:15",
+        "uid" : "None"
+      }, {
+        "time" : "18:30",
+        "uid" : "None"
+      }, {
+        "time" : "18:45",
+        "uid" : "v5fHs2tyOhhvzd2ua5usxDVxJmj2"
+      }, {
+        "time" : "19:00",
+        "uid" : "None"
+      }, {
+        "time" : "19:15",
+        "uid" : "ayth0dcH7XRF7egiHGYZqSdZSBJ2"
+      }, {
+        "time" : "19:30",
+        "uid" : "None"
+      }, {
+        "time" : "19:45",
+        "uid" : "XKnIZIFQgTa7zwsPLIMURkhF2wD2"
+      } ]
+    },
+    "DRB" : {
+      "meeting" : [ {
+        "time" : "15:00",
+        "uid" : "None"
+      }, {
+        "time" : "15:15",
+        "uid" : "Bzebi9sgd1RolqqJy43VUCKTKCE3"
+      }, {
+        "time" : "15:30",
+        "uid" : "None"
+      }, {
+        "time" : "15:45",
+        "uid" : "None"
+      }, {
+        "time" : "16:00",
+        "uid" : "None"
+      }, {
+        "time" : "16:15",
+        "uid" : "None"
+      }, {
+        "time" : "16:30",
+        "uid" : "ayth0dcH7XRF7egiHGYZqSdZSBJ2"
+      }, {
+        "time" : "16:45",
+        "uid" : "None"
+      }, {
+        "time" : "17:00",
+        "uid" : "None"
+      }, {
+        "time" : "17:15",
+        "uid" : "None"
+      }, {
+        "time" : "17:30",
+        "uid" : "v5fHs2tyOhhvzd2ua5usxDVxJmj2"
+      }, {
+        "time" : "17:45",
+        "uid" : "None"
+      }, {
+        "time" : "18:00",
+        "uid" : "None"
+      }, {
+        "time" : "18:15",
+        "uid" : "None"
+      }, {
+        "time" : "18:30",
+        "uid" : "None"
+      }, {
+        "time" : "18:45",
+        "uid" : "None"
+      }, {
+        "time" : "19:00",
+        "uid" : "None"
+      }, {
+        "time" : "19:15",
+        "uid" : "None"
+      }, {
+        "time" : "19:30",
+        "uid" : "None"
+      }, {
+        "time" : "19:45",
+        "uid" : "None"
+      } ]
+    },
+    "DRG" : {
+      "meeting" : [ {
+        "time" : "15:00",
+        "uid" : "None"
+      }, {
+        "time" : "15:15",
+        "uid" : "None"
+      }, {
+        "time" : "15:30",
+        "uid" : "None"
+      }, {
+        "time" : "15:45",
+        "uid" : "None"
+      }, {
+        "time" : "16:00",
+        "uid" : "None"
+      }, {
+        "time" : "16:15",
+        "uid" : "v5fHs2tyOhhvzd2ua5usxDVxJmj2"
+      }, {
+        "time" : "16:30",
+        "uid" : "None"
+      }, {
+        "time" : "16:45",
+        "uid" : "H6KGG72BA7brlrNnwVPcSpwFAK93"
+      }, {
+        "time" : "17:00",
+        "uid" : "None"
+      }, {
+        "time" : "17:15",
+        "uid" : "None"
+      }, {
+        "time" : "17:30",
+        "uid" : "None"
+      }, {
+        "time" : "17:45",
+        "uid" : "None"
+      }, {
+        "time" : "18:00",
+        "uid" : "None"
+      }, {
+        "time" : "18:15",
+        "uid" : "None"
+      }, {
+        "time" : "18:30",
+        "uid" : "None"
+      }, {
+        "time" : "18:45",
+        "uid" : "None"
+      }, {
+        "time" : "19:00",
+        "uid" : "None"
+      }, {
+        "time" : "19:15",
+        "uid" : "None"
+      }, {
+        "time" : "19:30",
+        "uid" : "Bzebi9sgd1RolqqJy43VUCKTKCE3"
+      }, {
+        "time" : "19:45",
+        "uid" : "None"
+      } ]
+    },
+    "JT" : {
+      "meeting" : [ {
+        "time" : "15:00",
+        "uid" : "v5fHs2tyOhhvzd2ua5usxDVxJmj2"
+      }, {
+        "time" : "15:15",
+        "uid" : "XKnIZIFQgTa7zwsPLIMURkhF2wD2"
+      }, {
+        "time" : "15:30",
+        "uid" : "None"
+      }, {
+        "time" : "15:45",
+        "uid" : "None"
+      }, {
+        "time" : "16:00",
+        "uid" : "None"
+      }, {
+        "time" : "16:15",
+        "uid" : "None"
+      }, {
+        "time" : "16:30",
+        "uid" : "None"
+      }, {
+        "time" : "16:45",
+        "uid" : "None"
+      }, {
+        "time" : "17:00",
+        "uid" : "None"
+      }, {
+        "time" : "17:15",
+        "uid" : "None"
+      }, {
+        "time" : "17:30",
+        "uid" : "H6KGG72BA7brlrNnwVPcSpwFAK93"
+      }, {
+        "time" : "17:45",
+        "uid" : "None"
+      }, {
+        "time" : "18:00",
+        "uid" : "None"
+      }, {
+        "time" : "18:15",
+        "uid" : "None"
+      }, {
+        "time" : "18:30",
+        "uid" : "None"
+      }, {
+        "time" : "18:45",
+        "uid" : "Bzebi9sgd1RolqqJy43VUCKTKCE3"
+      }, {
+        "time" : "19:00",
+        "uid" : "None"
+      }, {
+        "time" : "19:15",
+        "uid" : "None"
+      }, {
+        "time" : "19:30",
+        "uid" : "None"
+      }, {
+        "time" : "19:45",
+        "uid" : "None"
+      } ]
+    },
+    "MG" : {
+      "meeting" : [ {
+        "time" : "15:00",
+        "uid" : "Bzebi9sgd1RolqqJy43VUCKTKCE3"
+      }, {
+        "time" : "15:15",
+        "uid" : "None"
+      }, {
+        "time" : "15:30",
+        "uid" : "v5fHs2tyOhhvzd2ua5usxDVxJmj2"
+      }, {
+        "time" : "15:45",
+        "uid" : "None"
+      }, {
+        "time" : "16:00",
+        "uid" : "None"
+      }, {
+        "time" : "16:15",
+        "uid" : "None"
+      }, {
+        "time" : "16:30",
+        "uid" : "XKnIZIFQgTa7zwsPLIMURkhF2wD2"
+      }, {
+        "time" : "16:45",
+        "uid" : "None"
+      }, {
+        "time" : "17:00",
+        "uid" : "None"
+      }, {
+        "time" : "17:15",
+        "uid" : "None"
+      }, {
+        "time" : "17:30",
+        "uid" : "None"
+      }, {
+        "time" : "17:45",
+        "uid" : "None"
+      }, {
+        "time" : "18:00",
+        "uid" : "None"
+      }, {
+        "time" : "18:15",
+        "uid" : "None"
+      }, {
+        "time" : "18:30",
+        "uid" : "None"
+      }, {
+        "time" : "18:45",
+        "uid" : "None"
+      }, {
+        "time" : "19:00",
+        "uid" : "None"
+      }, {
+        "time" : "19:15",
+        "uid" : "None"
+      }, {
+        "time" : "19:30",
+        "uid" : "None"
+      }, {
+        "time" : "19:45",
+        "uid" : "None"
+      } ]
+    },
+    "MH" : {
+      "meeting" : [ {
+        "time" : "15:00",
+        "uid" : "None"
+      }, {
+        "time" : "15:15",
+        "uid" : "Q8LyVQ62WuZ4VhyPzpV2Xx6EXbD2"
+      }, {
+        "time" : "15:30",
+        "uid" : "None"
+      }, {
+        "time" : "15:45",
+        "uid" : "None"
+      }, {
+        "time" : "16:00",
+        "uid" : "None"
+      }, {
+        "time" : "16:15",
+        "uid" : "None"
+      }, {
+        "time" : "16:30",
+        "uid" : "v5fHs2tyOhhvzd2ua5usxDVxJmj2"
+      }, {
+        "time" : "16:45",
+        "uid" : "None"
+      }, {
+        "time" : "17:00",
+        "uid" : "None"
+      }, {
+        "time" : "17:15",
+        "uid" : "XKnIZIFQgTa7zwsPLIMURkhF2wD2"
+      }, {
+        "time" : "17:30",
+        "uid" : "None"
+      }, {
+        "time" : "17:45",
+        "uid" : "None"
+      }, {
+        "time" : "18:00",
+        "uid" : "None"
+      }, {
+        "time" : "18:15",
+        "uid" : "None"
+      }, {
+        "time" : "18:30",
+        "uid" : "None"
+      }, {
+        "time" : "18:45",
+        "uid" : "None"
+      }, {
+        "time" : "19:00",
+        "uid" : "None"
+      }, {
+        "time" : "19:15",
+        "uid" : "None"
+      }, {
+        "time" : "19:30",
+        "uid" : "None"
+      }, {
+        "time" : "19:45",
+        "uid" : "None"
+      } ]
+    },
+    "PB" : {
+      "meeting" : [ {
+        "time" : "15:00",
+        "uid" : "None"
+      }, {
+        "time" : "15:15",
+        "uid" : "H6KGG72BA7brlrNnwVPcSpwFAK93"
+      }, {
+        "time" : "15:30",
+        "uid" : "None"
+      }, {
+        "time" : "15:45",
+        "uid" : "None"
+      }, {
+        "time" : "16:00",
+        "uid" : "ayth0dcH7XRF7egiHGYZqSdZSBJ2"
+      }, {
+        "time" : "16:15",
+        "uid" : "None"
+      }, {
+        "time" : "16:30",
+        "uid" : "None"
+      }, {
+        "time" : "16:45",
+        "uid" : "None"
+      }, {
+        "time" : "17:00",
+        "uid" : "v5fHs2tyOhhvzd2ua5usxDVxJmj2"
+      }, {
+        "time" : "17:15",
+        "uid" : "None"
+      }, {
+        "time" : "17:30",
+        "uid" : "None"
+      }, {
+        "time" : "17:45",
+        "uid" : "XKnIZIFQgTa7zwsPLIMURkhF2wD2"
+      }, {
+        "time" : "18:00",
+        "uid" : "None"
+      }, {
+        "time" : "18:15",
+        "uid" : "None"
+      }, {
+        "time" : "18:30",
+        "uid" : "Bzebi9sgd1RolqqJy43VUCKTKCE3"
+      }, {
+        "time" : "18:45",
+        "uid" : "None"
+      }, {
+        "time" : "19:00",
+        "uid" : "None"
+      }, {
+        "time" : "19:15",
+        "uid" : "None"
+      }, {
+        "time" : "19:30",
+        "uid" : "None"
+      }, {
+        "time" : "19:45",
+        "uid" : "None"
+      } ]
+    },
+    "RG" : {
+      "meeting" : [ {
+        "time" : "15:00",
+        "uid" : "None"
+      }, {
+        "time" : "15:15",
+        "uid" : "None"
+      }, {
+        "time" : "15:30",
+        "uid" : "None"
+      }, {
+        "time" : "15:45",
+        "uid" : "None"
+      }, {
+        "time" : "16:00",
+        "uid" : "H6KGG72BA7brlrNnwVPcSpwFAK93"
+      }, {
+        "time" : "16:15",
+        "uid" : "None"
+      }, {
+        "time" : "16:30",
+        "uid" : "None"
+      }, {
+        "time" : "16:45",
+        "uid" : "None"
+      }, {
+        "time" : "17:00",
+        "uid" : "XKnIZIFQgTa7zwsPLIMURkhF2wD2"
+      }, {
+        "time" : "17:15",
+        "uid" : "None"
+      }, {
+        "time" : "17:30",
+        "uid" : "None"
+      }, {
+        "time" : "17:45",
+        "uid" : "Bzebi9sgd1RolqqJy43VUCKTKCE3"
+      }, {
+        "time" : "18:00",
+        "uid" : "None"
+      }, {
+        "time" : "18:15",
+        "uid" : "None"
+      }, {
+        "time" : "18:30",
+        "uid" : "ayth0dcH7XRF7egiHGYZqSdZSBJ2"
+      }, {
+        "time" : "18:45",
+        "uid" : "None"
+      }, {
+        "time" : "19:00",
+        "uid" : "None"
+      }, {
+        "time" : "19:15",
+        "uid" : "None"
+      }, {
+        "time" : "19:30",
+        "uid" : "v5fHs2tyOhhvzd2ua5usxDVxJmj2"
+      }, {
+        "time" : "19:45",
+        "uid" : "None"
+      } ]
+    }
+  }
+}
