@@ -12,24 +12,26 @@ var full_teacher_name = {
     "CB": "Chandler Bing"
 }
 
+
 $(document).ready(function () {
     logout();
     initFirebase();
-    update_calnder("RG");
+    update_calendar("RG");
     upadate_db_on_click();
 });
-//verify user wont have more then one meeting with the same teacher
+
+//verify that user wont have more then one meeting with the same teacher
 function check_already_set_metting_with_current_teacher(teacher_list, index) {
     let flag = true;
     $.each(teacher_list[current_teacher].meeting, function (i, meeting) {
         if ((meeting.uid).localeCompare(current_user.uid) == 0 && (String(i).toString()).localeCompare(index) != 0) {
-            alert("you already signed to " + full_teacher_name[current_teacher]);
+            alert("You already have a meeting with " + full_teacher_name[current_teacher]);
             flag = false;
         }
     });
     return flag;
 }
-// check if user dont have duplicates at meeting times.. cant be in two places at a time...
+//check if user dont have duplicates at meeting times.. cant be in two places at a time...
 function check_user_have_meeting_this_time(teacher_list, index) {
     let flag = true;
     $.each(teacher_list, function (i, teacher) {
@@ -37,19 +39,20 @@ function check_user_have_meeting_this_time(teacher_list, index) {
             return;
         }
         if ((teacher.meeting[index].uid).localeCompare(current_user.uid) == 0) {
-            alert("you have meeting with " + full_teacher_name[i] + " at this time!");
+            alert("You already have a meeting with " + full_teacher_name[i] + " at this time!");
             flag = false;
         }
     });
     return flag;
 }
-//when table click update database
+
+//update database when user clicks on empty slot
 function upadate_db_on_click() {
     function update(index, val_to_save) {
         firebase.database().ref('teacher_list/' + current_teacher + '/meeting/' + index).update({
             uid: val_to_save
         }).then(() => {
-            update_calnder(current_teacher);
+            update_calendar(current_teacher);
         });
     }
     $('body').on('click', '.click_meeting', function (params) {
@@ -82,10 +85,11 @@ function upadate_db_on_click() {
             });
     });
 }
+
 //called when select diffrent teacher at selectBar.
 $('#teacher_select').on('change', function () {
     current_teacher = $(this).val();
-    update_calnder($(this).val());
+    update_calendar($(this).val());
 });
 
 function logout() {
@@ -96,7 +100,8 @@ function logout() {
     });
 }
 
-function build_calender(teacher_arr) {
+//initialize calendar
+function build_calendar(teacher_arr) {
     $("#loader").hide();
     $("#meeting_list").empty();
     $.each(teacher_arr, function (i, value) {
@@ -119,26 +124,24 @@ function build_calender(teacher_arr) {
         let index = 0;
         $.each($(row_at_table), function (i, val) {
             if ($(val).find("#" + index + "d").text().localeCompare("Free") == 0) {
-                // $(val).css('background-color', '#18a103');
             } else if ($(val).find("#" + index + "d").text().localeCompare("Occupied by me") == 0) {
                 $(val).css('background-color', '#18a103');
             }
             else {
                 $(val).css('background-color', '#fd0303');
-
             }
             index += 1;
         })
     });
 }
 
-function update_calnder(name_teacher) {
+function update_calendar(name_teacher) {
     var teacher_arr;
     firebase.database().ref('/teacher_list/' + name_teacher + "/meeting").once('value').then(
         function (snapshot) {
             teacher_arr = snapshot.val();
         }).then(() => {
-            build_calender(teacher_arr);
+            build_calendar(teacher_arr);
         });
 }
 
@@ -146,7 +149,7 @@ function initFirebase() {
     function greetings(userEmail) {
         var name = userEmail.substring(0, userEmail.indexOf("@"));
         user_name = name;
-        document.getElementById('greet').innerHTML = "Welcome " + name + " parents!";
+        document.getElementById('greet').innerHTML = "Welcome " + name + "'s parents!";
     }
     //create config for initialization
     const firebaseConfig = {
